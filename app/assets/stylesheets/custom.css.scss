@@ -94,11 +94,23 @@ footer small {
 }
 
 footer ul {
-  float: right;
+  float: left;
   list-style: none;
 }
 
 footer ul li {
   float: left;
   margin-left: 10px;
+}
+
+.alert-notice {
+  color: blue;
+}
+
+.alert-error {
+  color: red;
+}
+
+.alert-success {
+  color: green;
 }

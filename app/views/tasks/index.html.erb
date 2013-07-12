@@ -1,0 +1,33 @@
+<% provide(:title, 'Tasks') %>
+<h1>Tasks fo You</h1>
+<p>
+Your Tasks
+</p>
+
+<table class='table-striped table-bordered'>
+  <tr>
+    <th>Task</th>
+    <th>Summary</th>
+    <th>Blockers</th>
+    <th>Date<th>
+  </tr>
+
+  <% @tasks.each do |task| %>
+    <tr>
+      <td><%= task.task_name %></td>
+      <td><%= task.details %></td>
+      <td><%= task.blockers %></td>
+      <td><%= task.task_date.strftime("%b %-d %Y") if task.task_date %></td>
+    </tr>
+  <% end %>
+</table>
+
+<%= form_for @new_task do |f| %> 
+  Task: <%= f.text_field :task_name %>
+  Details: <%= f.text_field :details %>
+  Blockers: <%= f.text_field :blockers %>
+  Date: <%= f.select(:task_date, options_for_select([Date.today.strftime("%b %-d %Y"),
+                                                     Date.yesterday.strftime("%b %-d %Y")])) %>
+  <%= f.submit %>
+<% end %>
+
