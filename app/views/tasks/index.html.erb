@@ -12,13 +12,15 @@ Your Tasks
     <th>Date<th>
   </tr>
 
-  <% @tasks.each do |task| %>
-    <tr>
-      <td><%= task.task_name %></td>
-      <td><%= task.details %></td>
-      <td><%= task.blockers %></td>
-      <td><%= task.task_date.strftime("%b %-d %Y") if task.task_date %></td>
-    </tr>
+  <% if @tasks %>
+    <% @tasks.each do |task| %>
+      <tr>
+        <td><%= task.task_name %></td>
+        <td><%= task.details %></td>
+        <td><%= task.blockers %></td>
+        <td><%= task.task_date.strftime("%b %-d %Y") if task.task_date %></td>
+      </tr>
+    <% end %>
   <% end %>
 </table>
 
