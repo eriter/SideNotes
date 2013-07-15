@@ -1,9 +1,13 @@
 SideNotes::Application.routes.draw do
+  get "users/new"
+
   devise_for :users
 
   get 'static_pages/help'
 
   get 'static_pages/about'
+
+  match '/signup', to: 'users#new'
 
   resources :tasks, :only => [:index, :create]
 
