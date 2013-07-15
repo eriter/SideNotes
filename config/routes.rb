@@ -1,9 +1,9 @@
 SideNotes::Application.routes.draw do
   devise_for :users
 
-  get "static_pages/help"
+  get 'static_pages/help'
 
-  get "static_pages/about"
+  get 'static_pages/about'
 
   resources :tasks, :only => [:index, :create]
 

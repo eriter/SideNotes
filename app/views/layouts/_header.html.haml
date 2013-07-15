@@ -1,0 +1,13 @@
+%header.navbar.navbar-fixed-top
+  .navbar-inner
+    .container
+      = link_to "SideNotes", '/', id: "logo"
+      %nav
+        %ul.nav.pull-right
+          %li= link_to "Help", static_pages_help_path
+          - if user_signed_in?
+            %li
+              = link_to('Logout', destroy_user_session_path, :method => :delete)
+          - else
+            %li
+              = link_to('Login', new_user_session_path)

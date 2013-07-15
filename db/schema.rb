@@ -22,7 +22,7 @@ ActiveRecord::Schema.define(:version => 20130712215818) do
     t.datetime "updated_at", :null => false
   end
 
-  create_table "user_tasks", :id => false, :force => true do |t|
+  create_table "user_tasks", :force => true do |t|
     t.integer "users_id"
     t.integer "tasks_id"
   end

@@ -1,7 +1,7 @@
 class CreateTasksUsersJoinTable < ActiveRecord::Migration
   def change
 
-    create_table :user_tasks, id: false do |t|
+    create_table :user_tasks do |t|
       t.belongs_to :users
       t.belongs_to :tasks
     end

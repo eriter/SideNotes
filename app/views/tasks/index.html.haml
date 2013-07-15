@@ -1,0 +1,24 @@
+- provide(:title, 'Tasks')
+%h1 Tasks fo You
+%p
+  Your Tasks
+%table.table-striped.table-bordered
+  %tr
+    %th Task
+    %th Summary
+    %th Blockers
+    %th Date
+    %th
+  - if @tasks
+    - @tasks.each do |task|
+      %tr
+        %td= task.task_name
+        %td= task.details
+        %td= task.blockers
+        %td= task.task_date.strftime("%b %-d %Y") if task.task_date
+= form_for @new_task do |f|
+  Task: #{f.text_field :task_name}
+  Details: #{f.text_field :details}
+  Blockers: #{f.text_field :blockers}
+  Date: #{f.select(:task_date, options_for_select([Date.today.strftime("%b %-d %Y"), Date.yesterday.strftime("%b %-d %Y")]))}
+  \#{f.submit}
