@@ -19,6 +19,7 @@
 = form_for @new_task do |f|
   Task: #{f.text_field :task_name}
   Details: #{f.text_field :details}
+  %br
   Blockers: #{f.text_field :blockers}
   Date: #{f.select(:task_date, options_for_select([Date.today.strftime("%b %-d %Y"), Date.yesterday.strftime("%b %-d %Y")]))}
   \#{f.submit}
