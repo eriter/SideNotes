@@ -1,4 +1,17 @@
 SideNotes::Application.routes.draw do
+  get "users/new"
+
+  devise_for :users
+
+  get 'static_pages/help'
+
+  get 'static_pages/about'
+
+  match '/signup', to: 'users#new'
+
+  resources :tasks, :only => [:index, :create]
+
+  root :to => 'tasks#index'
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
