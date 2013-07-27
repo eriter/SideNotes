@@ -7,12 +7,10 @@ class TasksController < ApplicationController
   end
 
   def create
-    task = Task.new(params['task'])
-
-    if task.save
+    if TaskMaker.task_for_user(:params => params['task'], :user => current_user)
       flash[:notice] = 'Yay it worked'
     else
-      flash[:error] = 'oh noes! ' + task.errors.full_messages.to_sentence
+       flash[:error] = 'Failed to create the task'
     end
 
     redirect_to tasks_path

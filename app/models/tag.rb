@@ -1,4 +1,6 @@
-class Tags < ActiveRecord::Base
-  belongs_to :users
-  belongs_to :tasks
+class Tag < ActiveRecord::Base
+  attr_protected
+
+  belongs_to :user
+  belongs_to :task
 end

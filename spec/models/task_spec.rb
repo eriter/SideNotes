@@ -6,6 +6,10 @@ describe Task do
   end
 
   describe "associations" do
-    it { should have_many(:users).through(:user_tasks) }
+    it { should have_many(:users).through(:tags) }
+
+    pending "removes any associated tags on destroy" do
+
+    end
   end
 end
