@@ -4,6 +4,7 @@ gem 'rails', '3.2.13'
 gem 'bootstrap-sass', '2.0.0'
 gem 'mysql2'
 gem 'devise'
+gem 'will_paginate'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -11,6 +12,8 @@ gem 'devise'
 group :development, :test do
   gem 'rspec-rails', '2.11.0'
   gem 'shoulda'
+  gem 'pry'
+  gem 'pry-nav'
 end
 
 
@@ -20,14 +23,17 @@ group :assets do
   gem 'haml'
   gem 'sass-rails',   '~> 3.2.5'
   gem 'coffee-rails', '~> 3.2.2'
+  gem 'compass-rails'
+  gem 'groundworkcss'
+
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
-  # gem 'therubyracer', :platforms => :ruby
+  gem 'therubyracer', :platforms => :ruby
 
   gem 'uglifier', '>= 1.2.3'
 end
 
-gem 'jquery-rails', '2.0.2'
+gem 'jquery-rails'
 
 group :test do
   gem 'capybara', '1.1.2'

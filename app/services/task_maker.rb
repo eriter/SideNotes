@@ -1,10 +1,9 @@
 class TaskMaker
-  def self.task_for_users(args)
+  def self.task_for_user(args)
+    raise TaskMaker::CreationErrors
     unless
       task = Task.create(args[:task_params])
 
-      args[:users].each do |user|
-        task.users << user
-    raise TaskMaker::CreationErrors
+      args[:users].each {|user|task.users << user}
   end
 end
