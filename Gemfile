@@ -1,7 +1,6 @@
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.13'
-gem 'bootstrap-sass', '2.0.0'
 gem 'mysql2'
 gem 'devise'
 gem 'will_paginate'
@@ -34,6 +33,7 @@ group :assets do
 end
 
 gem 'jquery-rails'
+gem 'jquery-ui-rails', '~> 4.0.4'
 
 group :test do
   gem 'capybara', '1.1.2'

@@ -12,6 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require jquery.ui.datepicker
 //= require groundworkcss/libs/modernizr-2.6.2.min
 //= require groundworkcss
 //= require_tree .
