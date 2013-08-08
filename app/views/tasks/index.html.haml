@@ -1,25 +1,52 @@
 - provide(:title, 'Tasks')
-%h1 Tasks fo You
-%p
-  Your Tasks
-%table.table-striped.table-bordered
-  %tr
-    %th Task
-    %th Summary
-    %th Blockers
-    %th Date
-    %th
-  - if @tasks
-    - @tasks.each do |task|
+.padded
+  %h1
+    %i.spin-fast-once.icon-pencil
+    Tasks fo You
+  %legend
+    Your Tasks
+  %table
+    %thead
       %tr
-        %td= task.task_name
-        %td= task.details
-        %td= task.blockers
-        %td= task.task_date.strftime("%b %-d %Y") if task.task_date
+        %th
+          %i.icon-pencil
+          Task
+        %th
+          %i.icon-align-justify
+          Summary
+        %th
+          %i.icon-remove-sign
+          Blockers
+        %th
+          %i.icon-calendar
+          Date
+        %th
+          %i.icon-tag
+          Tags
+    - if @tasks
+      %tbody
+        - @tasks.each do |task|
+          %tr
+            %td= task.task_name
+            %td= task.details
+            %td= task.blockers
+            %td= task.task_date.strftime("%b %-d %Y") if task.task_date
+            %td
 = form_for @new_task do |f|
-  Task: #{f.text_field :task_name}
-  Details: #{f.text_field :details}
-  %br
-  Blockers: #{f.text_field :blockers}
-  Date: #{f.select(:task_date, options_for_select([Date.today.strftime("%b %-d %Y"), Date.yesterday.strftime("%b %-d %Y")]))}
-  \#{f.submit}
+  .row
+    .three.fifths.padded
+      = label_tag :task_name, 'Task'
+      = text_field_tag :task_name, nil, :placeholder => "Don't forget the milk..."
+    .one.fifth.padded
+      = label_tag :blockers, 'Blockers'
+      = text_field_tag :blockers, nil, :placeholder => "Need to get gas first..."
+    .one.fifth.padded
+      = label_tag :task_date, 'Date'
+      = select_tag(:task_date, options_for_select([Date.today.strftime("%b %-d %Y"), Date.yesterday.strftime("%b %-d %Y")]))
+  .padded
+    = label_tag :details, 'Details'
+    = text_area_tag :details, nil, :placeholder => "Milk is a valuable part of many Americans' daily diets..."
+  .padded
+    = button_tag :type => "submit" do
+      %i.icon-plus
+      Create Task

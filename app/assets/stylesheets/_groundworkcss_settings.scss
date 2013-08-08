@@ -33,15 +33,15 @@ $PIE_path:            asset-path("groundworkcss/libs/PIE.htc", javascript);
 
 // grid settings
 // $grid-classes:        true;       // enable output of grid classes       (recommended)
-// $numerators:          one    two    three  four    five   six    seven    eight   nine   ten    eleven    twelve;
-// $denominators:        whole  half   third  fourth  fifth  sixth  seventh  eighth  ninth  tenth  eleventh  twelfth;
-// $denominators-plural: wholes halves thirds fourths fifths sixths sevenths eighths ninths tenths elevenths twelfths;
-// $grid-adapters:       $one-whole $one-half $one-third $one-fourth $one-fifth;
+ $numerators:          one    two    three  four    five   six    seven    eight   nine   ten    eleven    twelve;
+ $denominators:        whole  half   third  fourth  fifth  sixth  seventh  eighth  ninth  tenth  eleventh  twelfth;
+ $denominators-plural: wholes halves thirds fourths fifths sixths sevenths eighths ninths tenths elevenths twelfths;
+ /*$grid-adapters:       $one-whole $one-half $one-third $one-fourth $one-fifth;*/
 // $max-width:           1200px;     // maximum container width (i.e. - 960px)
 // $gutter:              10px;       // gutter spacing (used by padded/gapped helpers, elements with padding, etc.)
 
 // flexbox settings
-// $flexbox-classes:    true;       // enable output of flexbox classes    (optional)
+ $flexbox-classes:    false;       // enable output of flexbox classes    (optional)
 // $flexbox-helpers:    flex-wrapper flex-box vertical-center; // for flexbox order use @include flex-order($val);
 
 // helper settings
@@ -53,7 +53,7 @@ $PIE_path:            asset-path("groundworkcss/libs/PIE.htc", javascript);
 //                       pull-right pull-left clear
 //                       center;
 
-// $positioning-classes: true;       // enable output of position helpers   (optional)
+ $positioning-classes: false;       // enable output of position helpers   (optional)
 
 // $size-classes:        true;       // enable output of size helpers       (recommended)
 // $size-helpers:        small large;
@@ -66,8 +66,8 @@ $PIE_path:            asset-path("groundworkcss/libs/PIE.htc", javascript);
 // $border-helpers:      bordered border-right border-left border-top border-bottom;
 
 // round/square
-// $default-radius:      4px;
-// $radius-classes:      true;       // enable output of radius helpers     (optional)
+ $default-radius:      4px;
+ $radius-classes:      false;       // enable output of radius helpers     (optional)
 // $radius-helpers:      square round;
 
 // rotation
@@ -92,7 +92,7 @@ $PIE_path:            asset-path("groundworkcss/libs/PIE.htc", javascript);
 
 // states
 // $ui-states:           disabled info alert warning error success;
-// $button-states:       on active disabled info alert warning error success;
+ /*$button-states:       on active disabled info alert warning error success;*/
 
 // typography
 // $type-tags:           true;       // enable output of type selectors     (recommended)
@@ -116,10 +116,10 @@ $PIE_path:            asset-path("groundworkcss/libs/PIE.htc", javascript);
 //                       code pre
 //                       invalid valid
 //                       unstyled;
-// $styled-lists:        true;       // enable output of styled lists       (optional)
+ $styled-lists:        false;       // enable output of styled lists       (optional)
 
 // webfonts
-// $webfont-classes:     true;       // enable output of webfont classes    (optional)
+ $webfont-classes:     false;       // enable output of webfont classes    (optional)
 
 // buttons
 // $button-tags:         true;       // enable output of button selectors   (recommended)
@@ -127,7 +127,7 @@ $PIE_path:            asset-path("groundworkcss/libs/PIE.htc", javascript);
 // $button-modifiers:    small large on active square round block;
 
 // navigation
-// $nav-tags:            true;       // enable output of nav selectors      (optional)
+ $nav-tags:            false;       // enable output of nav selectors      (optional)
 // $nav-classes:         true;
 
 // tabs
@@ -139,11 +139,11 @@ $PIE_path:            asset-path("groundworkcss/libs/PIE.htc", javascript);
 // $form-elements:       fieldset legend label input textarea;
 
 // tiles
-// $tiles:               true;       // enable output of tile classes       (optional)
+ $tiles:               false;       // enable output of tile classes       (optional)
 // $tile-modifiers:      on active small large square round disabled;
 
 // message & callout boxes
-// $ui-classes:          true;
+ $ui-classes:          true;
 // $ui-modifiers:        dismissible;
 
 // tables
@@ -151,7 +151,7 @@ $PIE_path:            asset-path("groundworkcss/libs/PIE.htc", javascript);
 // $table-classes:       true;
 
 // ARIA role selectors (WIP - nav, buttons, tabs, etc.)
-// $aria-selectors:      true;       // enable Aria role selectors
+ $aria-selectors:      false;       // enable Aria role selectors
 
 
 ///////////////////////
@@ -181,7 +181,7 @@ $base-line-height:    18px;        // base line height for Compass vertical rhyt
 ///////////////////////
 
 // base styles
-// $background-color:    #ffffff;
+ $background-color:    #eee;
 // $font-color:          #2b2b2d;
 
 // links
@@ -195,11 +195,11 @@ $base-line-height:    18px;        // base line height for Compass vertical rhyt
 // borders
 // $border-thickness:    1px;
 // $border-style:        solid;
-// $border-color:        #dddddd;
+ $border-color:        #dadae9;
 // $border:              #{$border-thickness} #{$border-style} #{$border-color};
 
 // buttons
-// $button-color:        #1DABB8;
+ $button-color:        #23869B;
 // $button-border-color: darken($button-color, 10%);
 // $button-active:       #198D98;
 // $button-text:         #ffffff;

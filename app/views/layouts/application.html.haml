@@ -10,8 +10,9 @@
   %body
     = render 'layouts/header'
     - flash.each do |name, msg|
-      %div{:class => "alert alert-#{name == :notice ? "success" : "error"}"}
-        = msg
+      .container.pad-top
+        %p{:class => "message #{name == :notice ? "success" : "error"}"}
+          = msg
     .container
       = yield
       = render 'layouts/footer'
