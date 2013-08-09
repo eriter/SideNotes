@@ -31,7 +31,7 @@
             %td= task.details
             %td= task.blockers
             %td= task.task_date.strftime("%b %-d %Y") if task.task_date
-            %td
+            %td= task.tags
 = form_for @new_task do |f|
   .row
     .three.fifths.padded

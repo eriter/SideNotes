@@ -12,22 +12,22 @@ describe TaskMaker do
   it 'creates a task with the given params' do
     Task.should_receive(:new).with(task_params)
 
-    described_class.task_for_users(:task_params => task_params, :users => [user])
+    described_class.task_for_user(:task_params => task_params, :users => [user])
   end
 
   it 'links a created task to a user' do
-    expect { described_class.task_for_users(:task_params => task_params, 
+    expect { described_class.task_for_user(:task_params => task_params, 
                                             :users => [user]) }.to change(Tag, :count).by(1)
   end
 
   it 'works with multiple users' do
-    expect { described_class.task_for_users(:task_params => task_params, 
+    expect { described_class.task_for_user(:task_params => task_params, 
                                             :users => [user,user2]) }.to change(Tag, :count).by(2)
 
   end
 
   it 'raises on a bad task' do
-     expect { described_class.task_for_users(:task_params => {}, 
+     expect { described_class.task_for_user(:task_params => {}, 
                                             :users => [user]) }.to raise_exception(TaskMaker::BadTask)
 
   end

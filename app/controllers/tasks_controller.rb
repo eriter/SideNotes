@@ -2,8 +2,8 @@ class TasksController < ApplicationController
   before_filter :authenticate_user!
 
   def index
-    @tasks = Task.all
-    @new_task = Task.new
+    @tasks = current_user.tasks
+    @new_task = current_user.tasks.build
   end
 
   def create
@@ -19,7 +19,4 @@ class TasksController < ApplicationController
   def new
     @task = Task.new(params[:task])
   end
-
-  private
-
 end
