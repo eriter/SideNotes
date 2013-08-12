@@ -1,4 +1,3 @@
-
      
       .".".".
     (`       `)               _.-=-.
@@ -20,6 +19,13 @@
                       // /`
                   ___// /__
         jgs     (`(`(---"-`)
+        
+        
+        
+        
+        SideNotes is an exploratory project for me to hack on, but it may one day provide a personalized summary of what you've done lately.
+        
+        Features are building towards: tagging other users to share your tasks, editing tasks, sorting your daily tasks, and integrating with Pivotal Tracker, or some sort of realworld workflow tool.
 
 
 
